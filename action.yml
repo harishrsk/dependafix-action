@@ -1,0 +1,34 @@
+name: "DependaFix - PR Comment Resolution Agent"
+description: "AI-powered agent to auto-fix GitHub PR comments based on Gemini 3.5 Flash."
+author: "Principal DevSecOps Engineer"
+
+branding:
+  icon: "check-circle"
+  color: "green"
+
+inputs:
+  gemini_api_key:
+    description: "Your Gemini API Key"
+    required: true
+  github_token:
+    description: "GitHub Token for accessing the repo and pushing code"
+    required: true
+  license_key:
+    description: "Your Lifetime License Key from Lemon Squeezy/Gumroad"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Run dependafix-bin
+      shell: bash
+      env:
+        GEMINI_API_KEY: ${{ inputs.gemini_api_key }}
+        GITHUB_TOKEN: ${{ inputs.github_token }}
+        LICENSE_KEY: ${{ inputs.license_key }}
+      run: |
+        # Make the pre-compiled binary executable
+        chmod +x ${{ github.action_path }}/dist/dependafix-bin
+        
+        # Execute the binary
+        ${{ github.action_path }}/dist/dependafix-bin
