@@ -12,7 +12,7 @@ DependaFix is an autonomous AI Junior Software Engineer that lives in your GitHu
 
 DependaFix is a premium Micro-SaaS tool available for a one-time lifetime payment. 
 
-1. **Purchase your Lifetime License** from our secure storefront: https://harishrsk.lemonsqueezy.com/checkout/buy/61892952-c676-4a14-a7a6-c4140ce337ac *(Replace with your payment link)*.
+1. **Purchase your Lifetime License** from our secure storefront: https://harishrsk.lemonsqueezy.com/checkout/buy/61892952-c676-4a14-a7a6-c4140ce337ac 
 2. After purchase, you will immediately receive a unique `LICENSE_KEY`.
 3. Get a Gemini API Key from [Google AI Studio](https://aistudio.google.com/app/apikey).
 4. Add both keys to your GitHub Repository Secrets!
